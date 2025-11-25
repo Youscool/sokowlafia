@@ -627,109 +627,55 @@ Banner Style
 --------------------------------------------- 
 */
 
-.main-banner .item {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 220px 20% 320px 20%;
-  margin-top: 0px;
-}
-
-.main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
-}
-
-.main-banner .item-2 {
-  background-image: url(../images/banner-02.jpg);
-}
-
-.main-banner .item-3 {
-  background-image: url(../images/banner-03.jpg);
-}
-
-.main-banner .item span.category {
-  background-color: #fff;
-  color: #1e1e1e;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-  padding: 6px 15px;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-.main-banner .item span.category em {
-  font-style: normal;
-  color: #f35525;
-}
-
-.main-banner .item h2 {
-  font-size: 62px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: 72px;
-  width: 50%;
-  margin-bottom: 0px;
-}
-
-.main-banner .owl-dots {
-  position: absolute;
-  bottom: 60px;
-  left: 20%;
-}
-
-.main-banner .owl-dots .owl-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin-right: 10px;
-  transition: all .5s;
-}
-
-.main-banner .owl-dots .active {
-  background-color: #f35525;
-}
-
-.main-banner .owl-nav {
-  position: absolute;
-  top: 50%;
+.main-banner {
   width: 100%;
-  transform: translateY(-50px);
+  height: 90vh;
+  overflow: hidden;
 }
 
-.main-banner .owl-nav .owl-prev i,
-.main-banner .owl-nav .owl-next i {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 24px;
-  display: inline-block;
+/* Background slide container */
+.banner-slide {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Slides backgrounds */
+.banner-1 {
+  background-image: url("/images/banner-01.jpg");
+}
+
+.banner-2 {
+  background-image: url("/images/banner-02.jpg");
+}
+
+.banner-3 {
+  background-image: url("/images/banner-03.jpg");
+}
+
+/* Caption styles */
+.banner-caption {
+  bottom: 25%;
+  text-align: left;
+}
+
+.banner-caption .category {
+  font-size: 20px;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  opacity: 1;
-  transition: all .3s;
 }
 
-.main-banner .owl-nav .owl-prev i {
-  position: absolute;
-  left: 45px;
+.banner-caption h2 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
 }
 
-.main-banner .owl-nav .owl-next i {
-  position: absolute;
-  right: 45px;
+@media (max-width: 768px) {
+  .banner-caption h2 {
+    font-size: 30px;
+  }
 }
-
-.main-banner .owl-nav .owl-prev i:hover,
-.main-banner .owl-nav .owl-next i:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-
 
 /* 
 ---------------------------------------------
@@ -742,7 +688,7 @@ Featured Style
 }
 
 .featured .left-image img {
-  padding-left: 55px;
+  padding-left: 30px;
 }
 
 .featured .left-image a {
@@ -849,7 +795,7 @@ Video Style
 */
 
 .video {
-  background-image: url(../images/video-bg.jpg);
+  background-image: url(/images/video-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1113,7 +1059,7 @@ Contact Style
 */
 
 .contact {
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(/images/contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1266,7 +1212,7 @@ Page Header Style
 */
 
 .page-heading {
-  background-image: url(../images/page-heading-bg.jpg);
+  background-image: url(/images/page-heading-bg.jpg);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
