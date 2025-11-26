@@ -36,7 +36,7 @@ function Counter({ end, duration = 2000 }) {
     return () => observer.disconnect();
   }, [end, duration]);
 
-  return <h2 className="timer count-title" ref={elementRef}>+ {value}</h2>;
+  return <h2 className="timer count-title fw-bold" ref={elementRef}>+ {value}</h2>;
 }
 
 export default function CounterUp() {

@@ -2,73 +2,77 @@
 
 import { Carousel } from "react-bootstrap";
 import CounterUp from "./Counter";
+import Image from "next/image";
+import Service from "@/app/components/Services";
+import Footer from "@/app/components/Footer";
 
 export default function Main() {
   return (
     <>
-    <Carousel className="main-banner">
+      <Carousel className="main-banner">
 
-      {/* SLIDE 1 */}
-      <Carousel.Item>
-        <div className="banner-slide banner-1"></div>
+        {/* SLIDE 1 */}
+        <Carousel.Item>
+          <div className="banner-slide banner-1"></div>
 
-        <Carousel.Caption className="banner-caption">
-          
-          <h2>
-            Votre futur
-            <br />
-            chez-vous commence ici
-          </h2>
-          <span className="category">
-            Des maisons modernes et sécurisées, <em>oû que vous soyez dans le monde</em>
-          </span>
-        </Carousel.Caption>
-      </Carousel.Item>
-
-      {/* SLIDE 2 */}
-      <Carousel.Item>
-        <div className="banner-slide banner-2"></div>
-
-        <Carousel.Caption className="banner-caption">
-          <h2>
-            Confort et élégance
-            <br />
-            à chaque détail
-          </h2>
+          <Carousel.Caption className="banner-caption">
+            <h2>
+              Votre futur
+              <br />
+              chez-vous commence ici
+            </h2>
             <span className="category">
-            Des constructions qui allient, <em>design comtemporain et durabilité</em>
-          </span>
-        </Carousel.Caption>
-      </Carousel.Item>
+              Des maisons modernes et sécurisées, <em>oû que vous soyez dans le monde</em>
+            </span>
+          </Carousel.Caption>
+        </Carousel.Item>
 
-      {/* SLIDE 3 */}
-      <Carousel.Item>
-        <div className="banner-slide banner-3"></div>
+        {/* SLIDE 2 */}
+        <Carousel.Item>
+          <div className="banner-slide banner-2"></div>
 
-        <Carousel.Caption className="banner-caption">
-          <h2>
-            Investissez!
-            <br />
-           Dans votre avenir, chez vous
-          </h2>
-           <span className="category">
-            Des projets immobiliers, <em>fiable, pensés pour la diaspora.</em>
-          </span>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+          <Carousel.Caption className="banner-caption">
+            <h2>
+              Confort et élégance
+              <br />
+              à chaque détail
+            </h2>
+            <span className="category">
+              Des constructions qui allient, <em>design comtemporain et durabilité</em>
+            </span>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        {/* SLIDE 3 */}
+        <Carousel.Item>
+          <div className="banner-slide banner-3"></div>
+
+          <Carousel.Caption className="banner-caption">
+            <h2>
+              Investissez!
+              <br />
+              Dans votre avenir, chez vous
+            </h2>
+            <span className="category">
+              Des projets immobiliers, <em>fiable, pensés pour la diaspora.</em>
+            </span>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
 
       {/* FEATURED */}
-      <div className="featured section">
+      <div className="featured section" id="featured">
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
               <div className="left-image">
-                <img src="/images/featured.jpg" alt="Featured" />
+                <Image src="/images/about.jpg" width={320} height={530} alt="About" className="w-100 object-fit-cover rounded-3" />
                 <a href="/" aria-label="Voir la propriété">
-                  <img
+                  <Image
                     src="/images/featured-icon.png"
                     alt="Icone"
+                    height={50}
+                    width={50}
                     style={{ maxWidth: "50px", padding: 0 }}
                   />
                 </a>
@@ -78,7 +82,7 @@ export default function Main() {
             <div className="col-lg-5">
               <div className="section-heading">
                 <h6>| A propos</h6>
-                <h2>Tous pour la satisfaction &amp; de nos clients</h2>
+                <h4>Tous pour la satisfaction &amp; de nos clients</h4>
               </div>
 
               <div className="accordion" id="accordionExample">
@@ -102,9 +106,18 @@ export default function Main() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      Get <strong>the best villa</strong> website template in HTML,
-                      CSS and Bootstrap for your business. TemplateMo provides you
-                     
+                      Nous sommes une <strong>entreprise immobilière</strong> spécialisée dans la vente de 
+                      <strong>terrains</strong>, la <strong>construction</strong>, le 
+                      <strong>suivi immobilier et l’architecture</strong>, 
+                      dédiée principalement à la <strong>diaspora</strong> souhaitant investir en toute 
+                      sécurité dans son pays d’origine.<br />
+
+                      Notre mission est d’offrir à nos clients une tranquillité 
+                      d’esprit totale, en prenant en charge chaque étape de leur 
+                      projet immobilier : de l’acquisition du terrain jusqu’à la 
+                      remise finale du bien. Grâce à une équipe qualifiée, un processus 
+                      transparent et un suivi rigoureux à distance, nous permettons à nos 
+                      clients vivant à l’étranger de construire et d’investir en toute confiance.
                     </div>
                   </div>
                 </div>
@@ -116,7 +129,7 @@ export default function Main() {
               <div className="info-table">
                 <ul>
                   <li>
-                    <img src="/images/info-icon-01.png" alt="" style={{ maxWidth: "52px" }} />
+                    <Image src="/images/info-icon-01.png" width={42} height={42} alt="" style={{ maxWidth: "52px" }} />
                     <h4>
                       Terrain
                       <br />
@@ -124,15 +137,15 @@ export default function Main() {
                     </h4>
                   </li>
                   <li>
-                    <img src="/images/info-icon-02.png" alt="" style={{ maxWidth: "52px" }} />
+                    <Image src="/images/info-icon-02.png" width={42} height={42} alt="" style={{ maxWidth: "52px" }} />
                     <h4>
-                      Titre foncier
+                      TF
                       <br />
                       <span>garanti</span>
                     </h4>
                   </li>
                   <li>
-                    <img src="/images/info-icon-03.png" alt="" style={{ maxWidth: "52px" }} />
+                    <Image src="/images/info-icon-03.png" width={42} height={42} alt="" style={{ maxWidth: "52px" }} />
                     <h4>
                       Paiement
                       <br />
@@ -140,7 +153,7 @@ export default function Main() {
                     </h4>
                   </li>
                   <li>
-                    <img src="/images/info-icon-04.png" alt="" style={{ maxWidth: "52px" }} />
+                    <Image src="/images/info-icon-04.png" width={42} height={42} alt="" style={{ maxWidth: "52px" }} />
                     <h4>
                       Sécurité
                       <br />
@@ -153,7 +166,8 @@ export default function Main() {
           </div>
         </div>
       </div>
-
+{/**SERVICE SECTION */}
+         <Service/>
       {/* VIDEO SECTION */}
       <div className="video section">
         <div className="container">
@@ -172,20 +186,20 @@ export default function Main() {
         <div className="container">
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
-             <div className="ratio ratio-16x9">
-    <iframe
-      src="https://www.youtube.com/embed/P_9FUuiU248"
-      title="From Empty Yard to Modern Homes: Full Build Timelapse"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+              <div className="ratio ratio-16x9">
+                <iframe
+                  src="https://www.youtube.com/embed/P_9FUuiU248"
+                  title="From Empty Yard to Modern Homes: Full Build Timelapse"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
-{/* COUNTERUP */}
-      <CounterUp/>
+      {/* COUNTERUP */}
+      <CounterUp />
       {/* PROPERTIES */}
       <div className="properties section">
         <div className="container">
@@ -203,20 +217,18 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/terrain-1.jpg" alt="Property 1" />
+                  <Image src="/images/terrain-1.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 1" />
                 </a>
-                <span className="category">Luxury Villa</span>
-                <h6>$2.264.000</h6>
-                <h4><a href="property-details.html">18 New Street Miami, OR 97219</a></h4>
+                <span className="category">Parcelle</span>
+                <h6>2.264.000 FCFA</h6>
+                <h4><a href="property-details.html">Kalaban Coura</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>8</span></li>
-                  <li>Bathrooms: <span>8</span></li>
-                  <li>Area: <span>545m2</span></li>
-                  <li>Floor: <span>3</span></li>
-                  <li>Parking: <span>6 spots</span></li>
+                  <li>Superficie: <span>650m2</span></li>
+                  <li>Accéssibilité: <span>très bonne</span></li>
+                  <li>Terrain: <span>colline</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -224,20 +236,18 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/terrain-2.jpg" alt="Property 2" />
+                  <Image src="/images/terrain-2.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 2" />
                 </a>
-                <span className="category">Luxury Villa</span>
-                <h6>$1.180.000</h6>
-                <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
+                <span className="category">Parcelle</span>
+                <h6>1.180.000 FCFA</h6>
+                <h4><a href="property-details.html">Kati fouga</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>6</span></li>
-                  <li>Bathrooms: <span>5</span></li>
-                  <li>Area: <span>450m2</span></li>
-                  <li>Floor: <span>3</span></li>
-                  <li>Parking: <span>8 spots</span></li>
+                  <li>Superficie: <span>230m2</span></li>
+                  <li>Accéssibilité: <span>bonne</span></li>
+                  <li>Terrain: <span>plat</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -245,20 +255,18 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/terrain-3.jpg" alt="Property 3" />
+                  <Image src="/images/terrain-3.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 3" />
                 </a>
-                <span className="category">Luxury Villa</span>
-                <h6>$1.460.000</h6>
-                <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
+                <span className="category">Parcelle</span>
+                <h6>1.460.000 FCFA</h6>
+                <h4><a href="property-details.html">Kabala - N'Golobougou</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>5</span></li>
-                  <li>Bathrooms: <span>4</span></li>
-                  <li>Area: <span>225m2</span></li>
-                  <li>Floor: <span>3</span></li>
-                  <li>Parking: <span>10 spots</span></li>
+                  <li>Superficie: <span>350m2</span></li>
+                  <li>Accéssibilité: <span>moyenne</span></li>
+                  <li>Terrain: <span>plat</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -267,20 +275,20 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/maison-1.jpg" alt="Property 4" />
+                  <Image src="/images/maison-1.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 4" />
                 </a>
-                <span className="category">Apartment</span>
-                <h6>$584.500</h6>
-                <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
+                <span className="category">Duplex R+1 Modern</span>
+                <h6>80M FCFA</h6>
+                <h4><a href="property-details.html">Golf</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>4</span></li>
-                  <li>Bathrooms: <span>3</span></li>
-                  <li>Area: <span>125m2</span></li>
-                  <li>Floor: <span>25th</span></li>
-                  <li>Parking: <span>2 cars</span></li>
+                  <li>Chambre: <span>6</span></li>
+                  <li>Toilette: <span>4</span></li>
+                  <li>Superficie: <span>125m2</span></li>
+                  <li>Annexe: <span>oui</span></li>
+                  <li>Parking: <span>2 voitures</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -288,20 +296,20 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/maison-2.jpg" alt="Property 5" />
+                  <Image src="/images/maison-2.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 5" />
                 </a>
-                <span className="category">Penthouse</span>
-                <h6>$925.600</h6>
-                <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
+                <span className="category">Villa</span>
+                <h6>925M FCFA</h6>
+                <h4><a href="property-details.html">Attbougou - 1008</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>4</span></li>
-                  <li>Bathrooms: <span>4</span></li>
-                  <li>Area: <span>180m2</span></li>
-                  <li>Floor: <span>38th</span></li>
-                  <li>Parking: <span>2 cars</span></li>
+                  <li>Chambre: <span>12</span></li>
+                  <li>Toilette: <span>6</span></li>
+                  <li>Superficie: <span>725m2</span></li>
+                  <li>Annexe: <span>oui</span></li>
+                  <li>Parking: <span>3 voitures</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -309,20 +317,20 @@ export default function Main() {
             <div className="col-lg-4 col-md-6">
               <div className="item">
                 <a href="property-details.html">
-                  <img src="/images/maison-3.jpg" alt="Property 6" />
+                  <Image src="/images/maison-3.jpg" width={150} height={100} className={"w-100 h-100 object-fit-cover"} alt="Property 6" />
                 </a>
-                <span className="category">Modern Condo</span>
-                <h6>$450.000</h6>
-                <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
+                <span className="category">Duplex Modern</span>
+                <h6>450M FCFA</h6>
+                <h4><a href="property-details.html">ACI 2000</a></h4>
                 <ul>
-                  <li>Bedrooms: <span>3</span></li>
-                  <li>Bathrooms: <span>2</span></li>
-                  <li>Area: <span>165m2</span></li>
-                  <li>Floor: <span>26th</span></li>
-                  <li>Parking: <span>3 cars</span></li>
+                  <li>Chambre: <span>4</span></li>
+                  <li>Toilette: <span>4</span></li>
+                  <li>Superficie: <span>95m2</span></li>
+                  <li>Annexe: <span>non</span></li>
+                  <li>Parking: <span>1 voitures</span></li>
                 </ul>
                 <div className="main-button">
-                  <a href="property-details.html">Schedule a visit</a>
+                  <a href="property-details.html">Visiter</a>
                 </div>
               </div>
             </div>
@@ -337,8 +345,8 @@ export default function Main() {
           <div className="row">
             <div className="col-lg-4 offset-lg-4">
               <div className="section-heading text-center">
-                <h6>| Contact Us</h6>
-                <h2>Get In Touch With Our Agents</h2>
+                <h6>| Contacter Nous</h6>
+                <h2>En un clic contactez nos agents</h2>
               </div>
             </div>
           </div>
@@ -363,20 +371,20 @@ export default function Main() {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="item phone">
-                    <img src="/assets/images/phone-icon.png" alt="phone" style={{ maxWidth: 52 }} />
+                    <Image src="/images/phone-icon.png" width={42} height={42} alt="phone" />
                     <h6>
                       010-020-0340
                       <br />
-                      <span>Phone Number</span>
+                      <span>Numéro de téléphone</span>
                     </h6>
                   </div>
                 </div>
 
                 <div className="col-lg-6">
                   <div className="item email">
-                    <img src="/assets/images/email-icon.png" alt="email" style={{ maxWidth: 52 }} />
+                    <Image src="/images/email-icon.png" alt="email" width={42} height={42} />
                     <h6>
-                      info@villa.co
+                      so@site.com
                       <br />
                       <span>Business Email</span>
                     </h6>
@@ -390,35 +398,28 @@ export default function Main() {
                 <div className="row">
                   <div className="col-lg-12">
                     <fieldset>
-                      <label htmlFor="name">Full Name</label>
-                      <input type="text" name="name" id="name" placeholder="Your Name..." autoComplete="on" required />
+                      <label htmlFor="name">Nom complet</label>
+                      <input type="text" name="name" id="name" placeholder="Votre nom..." autoComplete="on" required />
                     </fieldset>
                   </div>
 
                   <div className="col-lg-12">
                     <fieldset>
-                      <label htmlFor="email">Email Address</label>
-                      <input type="email" name="email" id="email" placeholder="Your E-mail..." required />
-                    </fieldset>
-                  </div>
-
-                  <div className="col-lg-12">
-                    <fieldset>
-                      <label htmlFor="subject">Subject</label>
-                      <input type="text" name="subject" id="subject" placeholder="Subject..." autoComplete="on" />
+                      <label htmlFor="email">Email</label>
+                      <input type="email" name="email" id="email" placeholder="Votre E-mail..." required />
                     </fieldset>
                   </div>
 
                   <div className="col-lg-12">
                     <fieldset>
                       <label htmlFor="message">Message</label>
-                      <textarea name="message" id="message" placeholder="Your Message" />
+                      <textarea name="message" id="message" placeholder="Votre Message" />
                     </fieldset>
                   </div>
 
                   <div className="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" className="orange-button">Send Message</button>
+                      <button type="submit" id="form-submit" className="orange-button">Envoyer Message</button>
                     </fieldset>
                   </div>
                 </div>
@@ -428,6 +429,7 @@ export default function Main() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

@@ -1,0 +1,66 @@
+/* Subheader */
+.sub-header {
+  background: #eee;
+  transition: all 0.4s ease;
+}
+
+.sub-header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Header */
+.header-area {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Animation au scroll */
+.background-header {
+  background: #000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.background-header h1,
+.background-header a {
+  color: #fff;
+}
+
+/* Menu */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile menu */
+@media (max-width: 991px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav.open {
+    max-height: 400px;
+  }
+
+  .menu-trigger {
+    background: none;
+    border: none;
+    color: #fff;
+  }
+}
