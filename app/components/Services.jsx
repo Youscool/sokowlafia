@@ -27,7 +27,7 @@ export default function Service() {
         img: "/images/service-architecture.jpg",
       },
     ].map((service, index) => (
-      <div className="col-md-6 col-lg-3" key={index}>
+      <div className="col-md-6 col-lg-3" key={index} data-aos="fade-up" data-aos-delay={`${index}00`}>
         <div
           className="position-relative text-white rounded overflow-hidden"
           style={{

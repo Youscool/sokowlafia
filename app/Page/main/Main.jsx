@@ -4,9 +4,17 @@ import { Carousel } from "react-bootstrap";
 import CounterUp from "./Counter";
 import Image from "next/image";
 import Service from "@/app/components/Services";
-import Footer from "@/app/components/Footer";
+import { useEffect } from "react";
 
+import AOS from "aos"
+import "aos/dist/aos.css"
 export default function Main() {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    }, []);
   return (
     <>
       <Carousel className="main-banner">
@@ -65,7 +73,7 @@ export default function Main() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <div className="left-image">
+              <div className="left-image" data-aos="fade-right" data-aos-delay="200">
                 <Image src="/images/about.jpg" width={320} height={530} alt="About" className="w-100 object-fit-cover rounded-3" />
                 <a href="/" aria-label="Voir la propriété">
                   <Image
@@ -79,7 +87,7 @@ export default function Main() {
               </div>
             </div>
 
-            <div className="col-lg-5">
+            <div className="col-lg-5" data-aos="fade-up" data-aos-delay="400">
               <div className="section-heading">
                 <h6>| A propos</h6>
                 <h4>Tous pour la satisfaction &amp; de nos clients</h4>
@@ -126,7 +134,7 @@ export default function Main() {
             </div>
 
             <div className="col-lg-3">
-              <div className="info-table">
+              <div className="info-table" data-aos="fade-left" data-aos-delay="600">
                 <ul>
                   <li>
                     <Image src="/images/info-icon-01.png" width={42} height={42} alt="" style={{ maxWidth: "52px" }} />
@@ -429,7 +437,6 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <Footer/>
     </>
   );
 }
