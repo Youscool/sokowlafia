@@ -9,12 +9,12 @@ import { useEffect } from "react";
 import AOS from "aos"
 import "aos/dist/aos.css"
 export default function Main() {
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <Carousel className="main-banner">
@@ -114,17 +114,17 @@ export default function Main() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      Nous sommes une <strong>entreprise immobilière</strong> spécialisée dans la vente de 
-                      <strong>terrains</strong>, la <strong>construction</strong>, le 
-                      <strong>suivi immobilier et l’architecture</strong>, 
-                      dédiée principalement à la <strong>diaspora</strong> souhaitant investir en toute 
+                      Nous sommes une <strong>entreprise immobilière</strong> spécialisée dans la vente de
+                      <strong>terrains</strong>, la <strong>construction</strong>, le
+                      <strong>suivi immobilier et l’architecture</strong>,
+                      dédiée principalement à la <strong>diaspora</strong> souhaitant investir en toute
                       sécurité dans son pays d’origine.<br />
 
-                      Notre mission est d’offrir à nos clients une tranquillité 
-                      d’esprit totale, en prenant en charge chaque étape de leur 
-                      projet immobilier : de l’acquisition du terrain jusqu’à la 
-                      remise finale du bien. Grâce à une équipe qualifiée, un processus 
-                      transparent et un suivi rigoureux à distance, nous permettons à nos 
+                      Notre mission est d’offrir à nos clients une tranquillité
+                      d’esprit totale, en prenant en charge chaque étape de leur
+                      projet immobilier : de l’acquisition du terrain jusqu’à la
+                      remise finale du bien. Grâce à une équipe qualifiée, un processus
+                      transparent et un suivi rigoureux à distance, nous permettons à nos
                       clients vivant à l’étranger de construire et d’investir en toute confiance.
                     </div>
                   </div>
@@ -174,8 +174,8 @@ export default function Main() {
           </div>
         </div>
       </div>
-{/**SERVICE SECTION */}
-         <Service/>
+      {/**SERVICE SECTION */}
+      <Service />
       {/* VIDEO SECTION */}
       <div className="video section">
         <div className="container">
@@ -350,7 +350,7 @@ export default function Main() {
       {/* CONTACT */}
       <div className="contact section">
         <div className="container">
-          <div className="row">
+          <div className="row g-2">
             <div className="col-lg-4 offset-lg-4">
               <div className="section-heading text-center">
                 <h6>| Contacter Nous</h6>
@@ -375,33 +375,8 @@ export default function Main() {
                   allowFullScreen
                 />
               </div>
-
-              <div className="row">
-                <div className="col-lg-6">
-                  <div className="item phone">
-                    <Image src="/images/phone-icon.png" width={42} height={42} alt="phone" />
-                    <h6>
-                      010-020-0340
-                      <br />
-                      <span>Numéro de téléphone</span>
-                    </h6>
-                  </div>
-                </div>
-
-                <div className="col-lg-6">
-                  <div className="item email">
-                    <Image src="/images/email-icon.png" alt="email" width={42} height={42} />
-                    <h6>
-                      so@site.com
-                      <br />
-                      <span>Business Email</span>
-                    </h6>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <div className="col-lg-5">
+            <div className="col-lg-5 mt-2 mt-lg-0">
               <form id="contact-form" action="" method="post">
                 <div className="row">
                   <div className="col-lg-12">
@@ -433,7 +408,29 @@ export default function Main() {
                 </div>
               </form>
             </div>
+          </div>
+          <div className="row mt-2 mt-lg-0">
+            <div className="col-lg-6">
+              <div className="item phone">
+                <Image src="/images/phone-icon.png" width={42} height={42} alt="phone" />
+                <h6>
+                  010-020-0340
+                  <br />
+                  <span>Numéro de téléphone</span>
+                </h6>
+              </div>
+            </div>
 
+            <div className="col-lg-6 mt-2 mt-lg-0">
+              <div className="item email">
+                <Image src="/images/email-icon.png" alt="email" width={42} height={42} />
+                <h6>
+                  so@site.com
+                  <br />
+                  <span>Business Email</span>
+                </h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>

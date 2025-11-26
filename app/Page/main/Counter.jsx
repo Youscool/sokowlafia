@@ -45,7 +45,7 @@ export default function CounterUp() {
       <div className="fun-facts">
         <div className="container">
           <div className="wrapper">
-            <div className="row">
+            <div className="row g-2">
               <div className="col-lg-4">
                 <div className="counter">
                   <Counter end={32}/>
